@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QGridLayout>
 #include <QList>
+#include <QDebug>
 
 #include <qgsmapcanvas.h>
 #include <qgsvectorlayer.h>

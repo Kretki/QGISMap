@@ -1,0 +1,4 @@
+/home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build/CMakeFiles/rebuild_cache.dir
+/home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build/CMakeFiles/edit_cache.dir
+/home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build/CMakeFiles/MapProject.dir
+/home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build/CMakeFiles/MapProject_autogen.dir

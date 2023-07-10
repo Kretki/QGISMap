@@ -31,27 +31,36 @@ MainWindow::MainWindow(QWidget *parent)
     QgsLayout* layout = new QgsLayout(QgsProject::instance());
     layout->initializeDefaults();
 
-    QgsLayoutItemShape * item = new QgsLayoutItemShape(layout);
-    item->attemptSetSceneRect(QRectF(0, 0, 1000, 1000));
     QgsSimpleFillSymbolLayer* fill = new QgsSimpleFillSymbolLayer();
+    fill->setColor(QColor(0, 0, 0));
     QgsSymbolLayerList fill_list = {fill};
-    QgsFillSymbol* fill_symbol = new QgsFillSymbol(fill_list);
 
     QgsFeatureIds featIds = moscowLayer->allFeatureIds();
-    QgsRenderContext context = QgsRenderContext();
-    QgsFeature feat = *(featIds.begin()+1);
-    QgsPolygon* poly = new QgsPolygon();
-    QgsConstWkbPtr wkbPtr = QgsConstWkbPtr(QgsCircle(100, 100).toCircularString()->asWkb());
-    poly->fromWkb(wkbPtr);
-    context.setGeometry(poly);
-    fill_symbol->renderFeature(*(featIds.begin()+1), context);
-    fill->setColor(QColor(127, 127, 127));
-    item->setSymbol(fill_symbol);
-
+    for(int i = 0; i<1; ++i){
+        QgsFeature feat = moscowLayer->getFeature(*(featIds.begin()+i));
+        if(feat.hasGeometry()){
+            QgsLayoutItemShape * item = new QgsLayoutItemShape(layout);
+            item->attemptSetSceneRect(QRectF(0, 0, 1000, 1000));
+            QgsPolygon* poly = new QgsPolygon();
+            poly->fromWkt(feat.geometry().asWkt());
+            QgsRenderContext context = QgsRenderContext();
+            context.setGeometry(poly);
+            qInfo() << poly->asJson();
+            QgsFillSymbol* fill_symbol = new QgsFillSymbol(fill_list);
+            fill_symbol->startRender(context);
+            fill_symbol->renderPolygon(feat.geometry().asQPolygonF(), nullptr, feat, context);
+            fill_symbol->stopRender(context);
+            fill_symbol->setColor(QColor(127, 127, 127));
+            fill_symbol->changeSymbolLayer(0, fill);
+            fill->setStrokeStyle(Qt::NoPen);
+            item->setSymbol(fill_symbol);
+            layout->addItem(item);
+        }
+    }
     QgsLayoutExporter* exporter = new QgsLayoutExporter(layout);
-    QgsLayoutExporter::ImageExportSettings exportSettings;
-    exportSettings.imageSize = QSize(1200, 1200);
-    exporter->exportToImage("../Image.png", exportSettings);
+    layout->renderContext().setDpi(40);
+    QImage image = exporter->renderRegionToImage(QRectF(0, 0, 100, 100));
+    image.save("../Image.png", "PNG");
 }
 
 MainWindow::~MainWindow()

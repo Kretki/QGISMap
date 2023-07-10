@@ -1,0 +1,19 @@
+[
+{
+  "directory": "/home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build",
+  "command": "/usr/bin/clang++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_PRINTSUPPORT_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -I. -I../ -IMapProject_autogen/include -I../src -I/apps/include/qgis -I/usr/include/gdal -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtXml -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtSql -isystem /usr/include/x86_64-linux-gnu/qt5/QtPrintSupport  -g   -fPIC -std=gnu++14 -o CMakeFiles/MapProject.dir/MapProject_autogen/mocs_compilation.cpp.o -c /home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build/MapProject_autogen/mocs_compilation.cpp",
+  "file": "/home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build/MapProject_autogen/mocs_compilation.cpp"
+},
+
+{
+  "directory": "/home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build",
+  "command": "/usr/bin/clang++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_PRINTSUPPORT_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -I. -I../ -IMapProject_autogen/include -I../src -I/apps/include/qgis -I/usr/include/gdal -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtXml -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtSql -isystem /usr/include/x86_64-linux-gnu/qt5/QtPrintSupport  -g   -fPIC -std=gnu++14 -o CMakeFiles/MapProject.dir/main.cpp.o -c /home/kretki/Qgis/TryQGIS/MapProject/QGISMap/main.cpp",
+  "file": "/home/kretki/Qgis/TryQGIS/MapProject/QGISMap/main.cpp"
+},
+
+{
+  "directory": "/home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build",
+  "command": "/usr/bin/clang++  -DQT_CORE_LIB -DQT_GUI_LIB -DQT_PRINTSUPPORT_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -I. -I../ -IMapProject_autogen/include -I../src -I/apps/include/qgis -I/usr/include/gdal -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtXml -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtSql -isystem /usr/include/x86_64-linux-gnu/qt5/QtPrintSupport  -g   -fPIC -std=gnu++14 -o CMakeFiles/MapProject.dir/mainwindow.cpp.o -c /home/kretki/Qgis/TryQGIS/MapProject/QGISMap/mainwindow.cpp",
+  "file": "/home/kretki/Qgis/TryQGIS/MapProject/QGISMap/mainwindow.cpp"
+}
+]

@@ -1,0 +1,68 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "MapProject",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "MapProject::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MapProject-Debug-13e60e5d5dd286266c89.json",
+					"name" : "MapProject",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MapProject_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MapProject_autogen-Debug-03259e147cee57d9f900.json",
+					"name" : "MapProject_autogen",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build",
+		"source" : "/home/kretki/Qgis/TryQGIS/MapProject/QGISMap"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
