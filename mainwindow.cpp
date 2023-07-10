@@ -28,39 +28,46 @@ MainWindow::MainWindow(QWidget *parent)
 
     QGridLayout* gl =new QGridLayout(Map);
     gl->addWidget(canvas);
-    QgsLayout* layout = new QgsLayout(QgsProject::instance());
-    layout->initializeDefaults();
 
-    QgsSimpleFillSymbolLayer* fill = new QgsSimpleFillSymbolLayer();
-    fill->setColor(QColor(0, 0, 0));
-    QgsSymbolLayerList fill_list = {fill};
+    QBrush brush;
+    brush.setColor(Qt::white);
+    brush.setStyle(Qt::SolidPattern);
+    QPen pen(Qt::white);
+
+    int CONST_SZ = 1000;
+
+    QGraphicsScene* scene = new QGraphicsScene(0,0,10000000/CONST_SZ,10000000/CONST_SZ);
+    
 
     QgsFeatureIds featIds = moscowLayer->allFeatureIds();
-    for(int i = 0; i<1; ++i){
+    for(int i = 0; i<featIds.size(); ++i){
         QgsFeature feat = moscowLayer->getFeature(*(featIds.begin()+i));
         if(feat.hasGeometry()){
-            QgsLayoutItemShape * item = new QgsLayoutItemShape(layout);
-            item->attemptSetSceneRect(QRectF(0, 0, 1000, 1000));
             QgsPolygon* poly = new QgsPolygon();
             poly->fromWkt(feat.geometry().asWkt());
-            QgsRenderContext context = QgsRenderContext();
-            context.setGeometry(poly);
-            qInfo() << poly->asJson();
-            QgsFillSymbol* fill_symbol = new QgsFillSymbol(fill_list);
-            fill_symbol->startRender(context);
-            fill_symbol->renderPolygon(feat.geometry().asQPolygonF(), nullptr, feat, context);
-            fill_symbol->stopRender(context);
-            fill_symbol->setColor(QColor(127, 127, 127));
-            fill_symbol->changeSymbolLayer(0, fill);
-            fill->setStrokeStyle(Qt::NoPen);
-            item->setSymbol(fill_symbol);
-            layout->addItem(item);
+            QJsonParseError parseError;
+            QJsonDocument doc = QJsonDocument::fromJson(poly->asJson().toUtf8(), &parseError);
+            QJsonObject obj = doc.object();
+            QJsonValue val = obj["coordinates"];
+            QJsonArray arr = val[0].toArray();
+            QVector<QPointF> points;
+            for(int i = 0; i<arr.size(); ++i){
+                points << QPointF(((arr[i].toArray())[0].toDouble()-37)*10000000/CONST_SZ, ((arr[i].toArray())[1].toDouble()-55)*10000000/CONST_SZ);
+            }
+            QPolygonF polygon(points);
+            //for(int i = 0; i<points.size(); ++i) qInfo() << points[i];
+            scene->addPolygon(polygon, pen, brush);
         }
     }
-    QgsLayoutExporter* exporter = new QgsLayoutExporter(layout);
-    layout->renderContext().setDpi(40);
-    QImage image = exporter->renderRegionToImage(QRectF(0, 0, 100, 100));
-    image.save("../Image.png", "PNG");
+    scene->clearSelection();                                                  // Selections would also render to the file
+    //scene->setSceneRect(scene->itemsBoundingRect());                          // Re-shrink the scene to it's bounding contents
+    QImage image(scene->sceneRect().size().toSize(), QImage::Format_Mono);  // Create the image with the exact size of the shrunk scene
+    //image.fill(QColor(0,0,0));
+    image.fill(0);                                       // Start all pixels transparent
+    QPainter painter(&image);
+    scene->render(&painter);
+    image.save("../Output.png");
+    qInfo() << "success";
 }
 
 MainWindow::~MainWindow()

@@ -34,7 +34,7 @@ include rules.ninja
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build && /usr/bin/cmake -S/home/kretki/Qgis/TryQGIS/MapProject/QGISMap -B/home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build
+  COMMAND = cd /home/kretki/vscodeWork/QGISMap/build && /usr/bin/cmake -S/home/kretki/vscodeWork/QGISMap -B/home/kretki/vscodeWork/QGISMap/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -46,7 +46,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/kretki/vscodeWork/QGISMap/build && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -121,7 +121,7 @@ build MapProject_autogen: phony CMakeFiles/MapProject_autogen MapProject_autogen
 # Custom command for CMakeFiles/MapProject_autogen
 
 build CMakeFiles/MapProject_autogen MapProject_autogen/mocs_compilation.cpp: CUSTOM_COMMAND
-  COMMAND = cd /home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build && /usr/bin/cmake -E cmake_autogen /home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build/CMakeFiles/MapProject_autogen.dir/AutogenInfo.json Debug
+  COMMAND = cd /home/kretki/vscodeWork/QGISMap/build && /usr/bin/cmake -E cmake_autogen /home/kretki/vscodeWork/QGISMap/build/CMakeFiles/MapProject_autogen.dir/AutogenInfo.json Debug
   DESC = Automatic MOC and UIC for target MapProject
   restat = 1
 
@@ -134,7 +134,7 @@ build CMakeFiles/MapProject_autogen MapProject_autogen/mocs_compilation.cpp: CUS
 # =============================================================================
 
 #############################################
-# Folder: /home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build
+# Folder: /home/kretki/vscodeWork/QGISMap/build
 
 build all: phony MapProject
 

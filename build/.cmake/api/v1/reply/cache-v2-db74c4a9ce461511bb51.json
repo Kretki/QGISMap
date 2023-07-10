@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build"
+			"value" : "/home/kretki/vscodeWork/QGISMap/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -463,7 +463,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/kretki/Qgis/TryQGIS/MapProject/QGISMap"
+			"value" : "/home/kretki/vscodeWork/QGISMap"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -999,7 +999,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build"
+			"value" : "/home/kretki/vscodeWork/QGISMap/build"
 		},
 		{
 			"name" : "MapProject_SOURCE_DIR",
@@ -1011,7 +1011,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/kretki/Qgis/TryQGIS/MapProject/QGISMap"
+			"value" : "/home/kretki/vscodeWork/QGISMap"
 		},
 		{
 			"name" : "Qt5Core_DIR",

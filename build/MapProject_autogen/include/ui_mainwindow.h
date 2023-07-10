@@ -23,6 +23,7 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QWidget *Map;
+    QWidget *Result;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -30,16 +31,19 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(800, 600);
+        MainWindow->resize(1572, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         Map = new QWidget(centralwidget);
         Map->setObjectName(QString::fromUtf8("Map"));
         Map->setGeometry(QRect(10, 10, 771, 531));
+        Result = new QWidget(centralwidget);
+        Result->setObjectName(QString::fromUtf8("Result"));
+        Result->setGeometry(QRect(790, 10, 771, 531));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 20));
+        menubar->setGeometry(QRect(0, 0, 1572, 20));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

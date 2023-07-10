@@ -96,18 +96,18 @@
 			"includes" : 
 			[
 				{
-					"path" : "/home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build"
+					"path" : "/home/kretki/vscodeWork/QGISMap/build"
 				},
 				{
-					"path" : "/home/kretki/Qgis/TryQGIS/MapProject/QGISMap"
+					"path" : "/home/kretki/vscodeWork/QGISMap"
 				},
 				{
 					"backtrace" : 0,
-					"path" : "/home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build/MapProject_autogen/include"
+					"path" : "/home/kretki/vscodeWork/QGISMap/build/MapProject_autogen/include"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "/home/kretki/Qgis/TryQGIS/MapProject/QGISMap/src"
+					"path" : "/home/kretki/vscodeWork/QGISMap/src"
 				},
 				{
 					"backtrace" : 4,

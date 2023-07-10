@@ -584,8 +584,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/kretki/Qgis/TryQGIS/MapProject/QGISMap/build",
-		"source" : "/home/kretki/Qgis/TryQGIS/MapProject/QGISMap"
+		"build" : "/home/kretki/vscodeWork/QGISMap/build",
+		"source" : "/home/kretki/vscodeWork/QGISMap"
 	},
 	"version" : 
 	{

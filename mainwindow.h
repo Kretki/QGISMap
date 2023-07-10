@@ -6,6 +6,14 @@
 #include <QList>
 #include <QDebug>
 
+#include <QJsonObject>
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QBrush>
+#include <QImage>
+#include <QPainter>
+
 #include <qgsmapcanvas.h>
 #include <qgsvectorlayer.h>
 #include <qgsdatasourceuri.h>

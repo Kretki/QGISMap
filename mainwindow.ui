@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>1572</width>
     <height>600</height>
    </rect>
   </property>
@@ -24,13 +24,23 @@
      </rect>
     </property>
    </widget>
+   <widget class="QWidget" name="Result" native="true">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>10</y>
+      <width>771</width>
+      <height>531</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1572</width>
      <height>20</height>
     </rect>
    </property>
